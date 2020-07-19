@@ -1,6 +1,8 @@
 import './css/style.css';
 
-setInterval(drawGoblin, 1000);
+function random(min, max) {
+  return Math.floor(min + Math.random() * (max + 1 - min));
+}
 
 function drawGoblin() {
   const img = document.getElementById('goblin');
@@ -8,6 +10,4 @@ function drawGoblin() {
   document.getElementById(`cell${idx}`).append(img);
 }
 
-function random(min, max) {
-  return Math.floor( min + Math.random() * (max + 1 - min) );
-}
+setInterval(drawGoblin, 1000);
